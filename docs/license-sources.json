@@ -1,0 +1,38 @@
+[
+  {
+    "path": "lib/uniswap-hooks/LICENSE",
+    "url": "https://raw.githubusercontent.com/OpenZeppelin/uniswap-hooks/b52f464aa0af8fcd8f16cdad9ae43581deb5cd47/LICENSE"
+  },
+  {
+    "path": "lib/uniswap-hooks/lib/openzeppelin-contracts/LICENSE",
+    "url": "https://raw.githubusercontent.com/OpenZeppelin/openzeppelin-contracts/fcbae5394ae8ad52d8e580a3477db99814b9d565/LICENSE"
+  },
+  {
+    "path": "lib/uniswap-hooks/lib/v4-periphery/LICENSE",
+    "url": "https://raw.githubusercontent.com/Uniswap/v4-periphery/9969eec44cfdf07e24b41de47f40276a58401976/LICENSE"
+  },
+  {
+    "path": "lib/forge-std/LICENSE-MIT",
+    "url": "https://raw.githubusercontent.com/foundry-rs/forge-std/3e2295d50379faa6c8e9859d51b1f97a69a830d1/LICENSE-MIT"
+  },
+  {
+    "path": "lib/forge-std/LICENSE-APACHE",
+    "url": "https://raw.githubusercontent.com/foundry-rs/forge-std/3e2295d50379faa6c8e9859d51b1f97a69a830d1/LICENSE-APACHE"
+  },
+  {
+    "path": "lib/uniswap-hooks/lib/v4-core/lib/solmate/LICENSE",
+    "url": "https://raw.githubusercontent.com/transmissions11/solmate/89365b880c4f3c786bdd453d4b8e8fe410344a69/LICENSE"
+  },
+  {
+    "path": "lib/uniswap-hooks/lib/v4-core/licenses/BUSL_LICENSE",
+    "url": "https://raw.githubusercontent.com/Uniswap/v4-core/46c6834698c48bc4a463a86d8420f4eb1d7f3b75/licenses/BUSL_LICENSE"
+  },
+  {
+    "path": "lib/uniswap-hooks/lib/v4-core/licenses/MIT_LICENSE",
+    "url": "https://raw.githubusercontent.com/Uniswap/v4-core/46c6834698c48bc4a463a86d8420f4eb1d7f3b75/licenses/MIT_LICENSE"
+  },
+  {
+    "path": "lib/uniswap-hooks/lib/v4-core/lib/solmate/LICENSE-AGPL-3.0",
+    "url": "https://www.gnu.org/licenses/agpl-3.0.txt"
+  }
+]
