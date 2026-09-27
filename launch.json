@@ -1,0 +1,26 @@
+{
+  "kind": "univ4_hook",
+  "hook": {
+    "contract": "BuybackBurnHook",
+    "constructorArgs": [
+      "0xE03A1074c86CFeDd5C142C4F04F1a1536e203543"
+    ],
+    "permissions": [
+      "afterSwap",
+      "afterSwapReturnDelta"
+    ]
+  },
+  "token": {
+    "contract": "LaunchToken",
+    "name": "Ember",
+    "symbol": "EMBR",
+    "decimals": 18
+  },
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "78588986356927097284479352776873"
+  },
+  "notes": "Sources: src/BuybackBurnHook.sol and src/LaunchToken.sol; ABI exports: docs/abi/BuybackBurnHook.json and docs/abi/LaunchToken.json. LaunchToken has no constructor arguments. The hook's sole constructor argument is the Sepolia PoolManager. BaseHook validates permission address bits 0x0044 under mask 0x3FFF; all other permissions are false. The factory mines the CREATE2 salt. The pool orders native ETH as currency0 and EMBR as currency1. initialPrice is decimal sqrtPriceX96 = TickMath.getSqrtPriceAtTick(138000), matching test/BaseHookTest.sol; token-only liquidity lies below this starting price. The static 0.3% LP fee is separate from the hook fee. Each external swap pays floor(abs(unspecified-side delta) * 100 / 10000), returned as a positive afterSwap delta. EMBR fees go directly to 0x000000000000000000000000000000000000dEaD; ETH fees become ERC-6909 claims held by the hook. State is keyed by PoolId; non-native currency0 pools receive zero hook delta and no state updates. Anyone may buy back when accruedEth is at least 0.001 ETH, at most once per pool per block, spending up to 0.05 ETH. The hook unlocks the manager, swaps ETH for EMBR without a hook fee, burns claims for actual ETH spent, and sends output to the dead address. Callbacks require the PoolManager; buyback callbacks additionally require an active authorized payload. burnedTotal counts dead-address transfers, which do not reduce ERC-20 totalSupply. Buybacks use MIN_SQRT_PRICE + 1 without minimum-output protection: the spending cap and cooldown limit exposure but do not prevent sandwiches or guarantee execution value. This manifest describes the implementation; launch policy, signed artifact linkage, admission and deployment are handled separately by services."
+}
